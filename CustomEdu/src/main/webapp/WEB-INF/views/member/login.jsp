@@ -49,7 +49,7 @@
 										<span>Remember me</span>
 									</label>
 								</div>
-								<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
+								<button onclick="login()" class="btn btn-primary btn-lg btn-block" >LOGIN</button>
 								<button style ="background-color: grey; border-color:grey" class="btn btn-primary btn-lg btn-block">Sign in</button>
 								<div class="bottom">
 									<span class="helper-text">

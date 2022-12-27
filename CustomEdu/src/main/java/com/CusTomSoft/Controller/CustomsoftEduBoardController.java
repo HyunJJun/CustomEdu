@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 @Controller
-public class CustomsoftEduHomeController {
-	private final Logger LOGGER = LoggerFactory.getLogger(CustomsoftEduHomeController.class);
+public class CustomsoftEduBoardController {
+	private final Logger LOGGER = LoggerFactory.getLogger(CustomsoftEduBoardController.class);
 	
-	@GetMapping(value="/home")
-	public String home() throws Exception {
+	@GetMapping(value="/board")
+	public String board() throws Exception {
 		
-		return "home/home";
+		return "board/board";
 	}
 	
 

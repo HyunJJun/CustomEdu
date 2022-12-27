@@ -16,19 +16,31 @@ import org.springframework.web.servlet.ModelAndView;
 import com.CusTomSoft.Dto.MemberDto;
 import com.CusTomSoft.Service.MemberService;
 
+import lombok.extern.slf4j.Slf4j;
 
+
+@Slf4j
 @Controller
 public class CustomsoftEduMemberController {
-	private final Logger LOGGER = LoggerFactory.getLogger(CustomsoftEduMemberController.class);
+	
+	private final Logger logger = LoggerFactory.getLogger(CustomsoftEduMemberController.class);
 
 	@Autowired
 	private MemberService memberService; 
 	
+	//로그인 화면
 	@GetMapping("/login")
-	public String login() {
+	public String Login() {
+		logger.info("로그인 화면 ");
 		return "member/login";
 	}
+	@GetMapping("/signin")
+	public String SignIn() {
+		logger.info("회원가입화면 ");
+		return "member/signin";
+	}
 
+	//데이터 연결 확인
 	@GetMapping("/test")
 	public String test() {
 		String test=memberService.selectTest();
