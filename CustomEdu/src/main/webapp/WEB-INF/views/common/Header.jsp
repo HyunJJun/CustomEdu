@@ -20,6 +20,13 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon.png">
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="assets/vendor/chartist/js/chartist.min.js"></script>
+	<script src="assets/scripts/klorofil-common.js"></script>
+	<script src="js/index.js"></script>
 </head>
 
 <body>
@@ -38,11 +45,10 @@
 				</form>
 				<div class="navbar-btn navbar-btn-right">
 					<a  href ="/login" class="btn btn-success update-pro"> <span>Login</span></a>
-					<a  href ="/Signin" class="btn" style="background-color: white;"> <span>Sign in</span></a>
+					<a  href ="/signin" class="btn" style="background-color: white;"> <span>Sign in</span></a>
 				</div>
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
-					
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>로그인이 필요합니다.</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
@@ -62,10 +68,10 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
-						<li><a href="typography.html" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-						<li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>API</span></a></li>
+						<li><a class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="/board" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
+						<li><a href="/Jqgrid" class=""><i class="lnr lnr-text-format"></i> <span>JqGrid</span></a></li>
+						<li><a href="/api" class=""><i class="lnr lnr-linearicons"></i> <span>API</span></a></li>
 					</ul>
 				</nav>
 			</div>
