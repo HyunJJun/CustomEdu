@@ -45,7 +45,7 @@
 				</form>
 				<div class="navbar-btn navbar-btn-right">
 					<a  href ="/login" class="btn btn-success update-pro"> <span>Login</span></a>
-					<a  href ="/signin" class="btn" style="background-color: white;"> <span>Sign in</span></a>
+					<a  href ="/signup" class="btn" style="background-color: white;"> <span>Sign Up</span></a>
 				</div>
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">

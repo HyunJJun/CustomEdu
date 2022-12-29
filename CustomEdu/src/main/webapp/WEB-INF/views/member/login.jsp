@@ -50,7 +50,7 @@
 									</label>
 								</div>
 								<button onclick="login()" class="btn btn-primary btn-lg btn-block" >LOGIN</button>
-								<button style ="background-color: grey; border-color:grey" class="btn btn-primary btn-lg btn-block">Sign in</button>
+								<button type="button" onclick="location.href='/signup';" style ="background-color: grey; border-color:grey" class="btn btn-primary btn-lg btn-block">Sign Up</button>
 								<div class="bottom">
 									<span class="helper-text">
 										<i class="fa fa-lock"></i> 

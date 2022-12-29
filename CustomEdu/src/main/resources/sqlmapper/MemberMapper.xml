@@ -5,4 +5,11 @@
 	<select id="selectTest" resultType="string">
 		select *from member
 	</select>
+	
+	<insert id="insertMember" parameterType="hashMap">
+		insert into member (name , id , Enum , password ,birth , 
+							addr , addr2, tel , user_reg_date, email)
+					values (#{name} , #{id} , 'test' , #{pwd}, #{birth},
+							#{addr} , '강북' , #{tel} , sysdate(), 'test')
+	</insert>
 </mapper>
