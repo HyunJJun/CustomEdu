@@ -1,4 +1,6 @@
 function join(){
+	
+	
 	let user_id = 	$('#id').val();
 	let user_nm=  	$('#name').val();
 	let user_pwd = 	$('#pwd').val();
@@ -6,7 +8,7 @@ function join(){
 	let user_birth= $('#birth').val();
 	let user_tel =	$('#tel').val();
 	let user_addr =	$('#addr').val();
-	
+	alert(user_id);
 	let obj = {
 		name : user_nm ,
 		id : user_id, 

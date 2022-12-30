@@ -20,6 +20,13 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
 	<script src="/js/login.js"></script>
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="assets/vendor/chartist/js/chartist.min.js"></script>
+	<script src="assets/scripts/klorofil-common.js"></script>
+	<script src="js/index.js"></script>
 </head>
 
 <body>
@@ -34,14 +41,14 @@
 								<div class="logo text-center"><img src="/img/CI.jpg" alt="Klorofil Logo"></div>
 								<p class="lead">Login to your account</p>
 							</div>
-							<form class="form-auth-small" action="">
+							<form class="form-auth-small" action="/Dologin">
 								<div class="form-group">
 									<label for="signin-email" class="control-label sr-only">ENUM</label>
-									<input type="email" class="form-control" id="signin-email" value="" placeholder="ENUM">
+									<input type="text" class="form-control" name="id"  id ="id" value="" placeholder="사원번호">
 								</div>
 								<div class="form-group">
 									<label for="signin-password" class="control-label sr-only">Password</label>
-									<input type="password" class="form-control" id="signin-password" value="" placeholder="Password">
+									<input type="password" class="form-control" name="pwd" value="" placeholder="pwd">
 								</div>
 								<div class="form-group clearfix">
 									<label class="fancy-checkbox element-left">
@@ -49,7 +56,7 @@
 										<span>Remember me</span>
 									</label>
 								</div>
-								<button onclick="login()" class="btn btn-primary btn-lg btn-block" >LOGIN</button>
+								<button type="submit" class="btn btn-primary btn-lg btn-block" >LOGIN</button>
 								<button type="button" onclick="location.href='/signup';" style ="background-color: grey; border-color:grey" class="btn btn-primary btn-lg btn-block">Sign Up</button>
 								<div class="bottom">
 									<span class="helper-text">

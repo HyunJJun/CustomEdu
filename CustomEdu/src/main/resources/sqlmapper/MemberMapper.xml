@@ -2,14 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0 //EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.CusTomSoft.Mapper.MemberMapper">
+	<!-- 데이터 연결 테스트  -->
 	<select id="selectTest" resultType="string">
 		select *from member
 	</select>
 	
+	<!-- 회원가입 -->
 	<insert id="insertMember" parameterType="hashMap">
 		insert into member (name , id , Enum , password ,birth , 
 							addr , addr2, tel , user_reg_date, email)
 					values (#{name} , #{id} , 'test' , #{pwd}, #{birth},
 							#{addr} , '강북' , #{tel} , sysdate(), 'test')
 	</insert>
+	
+	<!-- 로그인 시 데이터 유무 확인  -->
+	<select id="selectCountMember" resultType="int">
+		select count(Enum) 
+			from member 
+				where Enum = #{Enum}
+				 and  pwd =  #{pwd} 
+	</select>
 </mapper>

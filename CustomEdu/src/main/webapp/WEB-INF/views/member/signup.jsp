@@ -15,12 +15,12 @@
 						</div>
 						<div class="panel-body">
 								<div><p><input style ="width:70%;" type= "text" class="form-control" placeholder="NAME" id="name"></p></div>
-								<div><p><input style ="width:70%;" type= "text" class="form-control" placeholder="ID" id="id" value=""></p></div>
+								<div><p><input style ="width:70%;" type= "text" class="form-control" placeholder="ID" id="id"></p></div>
 								<div><p><input style ="width:70%;" type= "text" class="form-control" placeholder="Pwd" id="pwd"></p></div>
 								<div><p><input style ="width:70%;" type= "text" class="form-control" placeholder="Email" id="email"></p></div>
 								<div><p><input style ="width:70%;" type= "text" class="form-control" placeholder="Birth" id=birth></p></div>
 								<div><p><input style ="width:70%;" type= "text" class="form-control" placeholder="Tel" id="tel"></p></div>
-								<div><p><input style ="width:70%;" type= "text" class="form-control" placeholder="Addr" id="addr" value=""></p></div>
+								<div><p><input style ="width:70%;" type= "text" class="form-control" placeholder="Addr" id="addr"></p></div>
 							<button type="button" class="btn btn-primary btn-block" onclick="join()">join</button>
 						</div>
 					</div>

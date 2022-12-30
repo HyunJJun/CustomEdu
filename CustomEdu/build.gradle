@@ -17,8 +17,6 @@ dependencies {
  	implementation "org.apache.tomcat.embed:tomcat-embed-jasper"
  	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     
-    //Spring security  
-    implementation 'org.springframework.boot:spring-boot-starter-security'
     
     // MYSQL
 	implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'

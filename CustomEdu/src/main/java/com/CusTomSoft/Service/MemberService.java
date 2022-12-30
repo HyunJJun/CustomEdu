@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.CusTomSoft.Controller.CustomsoftEduMemberController;
+import com.CusTomSoft.Dto.MemberDto;
 import com.CusTomSoft.Mapper.MemberMapper;
 
 @Service
@@ -25,5 +26,10 @@ public class MemberService {
 	public int insertMember(Map<Object, Object> map ) {
 			logger.info("MemberService.insertMember");
 		 return membermapper.insertMember(map);
+	}
+	
+	public int selectCountMember(MemberDto memberdto) {
+			logger.info("MemberService.selectCountMember");
+			return membermapper.selectCountMember(memberdto);
 	}
 }

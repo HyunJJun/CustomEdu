@@ -17,4 +17,6 @@ public interface MemberMapper {
 	
 	public int insertMember(Map<Object, Object> map);
 	
+	public int selectCountMember(MemberDto memberdto);
+	
 }
