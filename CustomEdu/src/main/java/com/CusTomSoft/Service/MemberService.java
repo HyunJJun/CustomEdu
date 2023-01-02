@@ -32,4 +32,9 @@ public class MemberService {
 			logger.info("MemberService.selectCountMember");
 			return membermapper.selectCountMember(memberdto);
 	}
+	
+	public MemberDto readMember(MemberDto memberdto) {
+			logger.info("MemberService.readMember");			
+		return membermapper.readMember(memberdto);
+	}
 }

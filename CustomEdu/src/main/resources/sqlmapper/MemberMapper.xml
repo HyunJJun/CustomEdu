@@ -17,9 +17,15 @@
 	
 	<!-- 로그인 시 데이터 유무 확인  -->
 	<select id="selectCountMember" resultType="int">
-		select count(Enum) 
+		select count(id) 
 			from member 
-				where Enum = #{Enum}
-				 and  pwd =  #{pwd} 
+				where id = #{id}
+				 and  password =  #{pwd} 
+	</select>
+	
+	<select id ="readMember" resultType="string">
+		select * from member
+			where id = #{id}
+			 and  password= #{pwd}
 	</select>
 </mapper>

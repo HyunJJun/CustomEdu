@@ -52,21 +52,87 @@ public class CustomsoftEduMemberController {
 	
 	@PostMapping("/Dologin")
 	@ResponseBody
-	public ModelAndView doLogin(@ModelAttribute MemberDto memberdto , HttpServletRequest req, HttpServletResponse resp, HttpSession sess  ) {
-		ModelAndView mav = new ModelAndView();
-
-		// 로그인 시 사원번호, 패스워드에 공백 제거
-		String Enum =req.getParameter("id").trim();
-		String pwd = req.getParameter("pwd").trim();
-
-		memberdto.setEnum(Enum);
-		memberdto.setPwd(pwd);
+	public ModelAndView doLogin(@ModelAttribute MemberDto memberdto, HttpServletRequest req, HttpServletResponse resp, HttpSession sess  ) {
+		ModelAndView mav= new ModelAndView(); 
+		
+		String Em_id  = req.getParameter("id");
+		String Em_pwd = req.getParameter("pwd");
+		
+		memberdto.setId(Em_id);
+		memberdto.setPwd(Em_pwd);
 		
 		int res=0;
-		
 		res= memberService.selectCountMember(memberdto);
 		logger.info("Dologin ---" +res);
 		
+		/*
+		 * @RequestMapping(value="Tmember/TloginPro.do" ,method=RequestMethod.POST)
+	public ModelAndView TloginPro(@ModelAttribute TmemberDTO dto
+								  ,HttpServletRequest req
+								  ,HttpServletResponse resp
+								  ,HttpSession session) {
+	ModelAndView mav=new ModelAndView();
+	 
+	 String mid=req.getParameter("Mid").trim();
+	 String mpasswd=req.getParameter("Mpasswd").trim();
+	 
+	
+	mav.addObject("root",Utility.getRoot());
+	
+	
+	dto.setMid(mid);
+	dto.setMpasswd(mpasswd);
+	 
+	  
+    int res=0;
+    res=dao.login(dto);
+    System.out.println("res:" +res);
+    
+  
+    if(res==1) {
+         dto=dao.read(dto.getMid());
+     	session.setAttribute("s_id", dto.getMid());
+     	session.setAttribute("memid", dto.getMid());
+     	session.setAttribute("s_passwd", dto.getMpasswd());
+     	session.setAttribute("s_mlevel", dto.getMlevel());
+     	
+     
+      
+        session.setAttribute("s_mlevel", dto.getMlevel());	
+        session.setAttribute("s_mnum", dto.getMnum());
+//-----------------------------------------쿠키 아이디저장
+       String c_id=req.getParameter("c_id");
+          if(c_id==null){ 
+             c_id="";
+          }
+       Cookie cookie=null;
+       if(c_id.equals("SAVE")) {
+          cookie=new Cookie("c_id", dto.getMid());
+          System.out.println(dto.getMid());
+          cookie.setMaxAge(60*60*24*31);//1달동안 쿠키저장
+       }else {
+          cookie=new Cookie("c_id", "");
+          cookie.setMaxAge(0);
+       }
+       resp.addCookie(cookie);//사용자 pc에 쿠키값저장
+//----------------------------------------------
+       
+       mav.setViewName("Tmember/TloginPro");
+    }// if end
+    
+    req.setAttribute("res", new Integer(res));
+	
+	
+	return mav;
+	}
+		 * */
+		
+		
+		if(res ==1 ) {
+			memberdto =memberService.readMember(memberdto); 
+			
+			sess.setAttribute("ses_id", memberdto.getId());
+		}
 		return mav; 
 	}
 	

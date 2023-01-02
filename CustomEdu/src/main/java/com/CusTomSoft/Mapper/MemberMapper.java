@@ -19,4 +19,6 @@ public interface MemberMapper {
 	
 	public int selectCountMember(MemberDto memberdto);
 	
+	public MemberDto readMember(MemberDto memberDto);
+	
 }

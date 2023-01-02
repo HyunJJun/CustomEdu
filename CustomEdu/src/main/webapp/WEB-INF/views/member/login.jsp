@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="ko" class="fullscreen-bg">
 <head>
@@ -19,7 +20,7 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
-	<script src="/js/login.js"></script>
+	<script src="/js/member/login.js"></script>
 	<script src="assets/vendor/jquery/jquery.min.js"></script>
 	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
@@ -41,14 +42,14 @@
 								<div class="logo text-center"><img src="/img/CI.jpg" alt="Klorofil Logo"></div>
 								<p class="lead">Login to your account</p>
 							</div>
-							<form class="form-auth-small" action="/Dologin">
+							<form class="form-auth-small" name="loginfrm" action="/Dologin" method="post">
 								<div class="form-group">
-									<label for="signin-email" class="control-label sr-only">ENUM</label>
-									<input type="text" class="form-control" name="id"  id ="id" value="" placeholder="사원번호">
+									<label for="signin-email" class="control-label sr-only">Id</label>
+									<input type="text" class="form-control" name="id"  id ="id" value="" placeholder="Id">
 								</div>
 								<div class="form-group">
 									<label for="signin-password" class="control-label sr-only">Password</label>
-									<input type="password" class="form-control" name="pwd" value="" placeholder="pwd">
+									<input type="password" class="form-control" name="pwd" value="" placeholder="Pwd">
 								</div>
 								<div class="form-group clearfix">
 									<label class="fancy-checkbox element-left">
