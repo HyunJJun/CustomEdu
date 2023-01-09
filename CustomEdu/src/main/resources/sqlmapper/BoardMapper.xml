@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0 //EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.CusTomSoft.Mapper.BoardMapper">
+	<!-- 데이터 연결 테스트  -->
+	<select id="getboardlist" resultType="hashmap">
+		select *from general_board
+	</select>
+	
+
+</mapper>

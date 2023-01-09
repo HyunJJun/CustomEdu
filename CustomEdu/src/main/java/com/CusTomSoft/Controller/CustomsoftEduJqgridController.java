@@ -17,18 +17,14 @@ import ch.qos.logback.core.model.Model;
 
 
 @Controller
-public class CustomsoftEduBoardController {
-	private final Logger logger = LoggerFactory.getLogger(CustomsoftEduBoardController.class);
+public class CustomsoftEduJqgridController {
+	private final Logger logger = LoggerFactory.getLogger(CustomsoftEduJqgridController.class);
 	
-	@Autowired
-	private BoardService boardservice;
 	
-	@GetMapping(value="/board")
+	@GetMapping(value="/Jqgrid")
 	public String BoardList(org.springframework.ui.Model model) throws Exception {
-		logger.info("게시판페이지 이동");
-		List<BoardDto> boardlist= boardservice.getboardlist();
-		model.addAttribute("boardlist",boardlist);
-		return "board/board";
+		
+		return "jqgrid/jqgrid";
 	}
 	
 

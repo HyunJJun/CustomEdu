@@ -8,7 +8,7 @@ function join(){
 	let user_birth= $('#birth').val();
 	let user_tel =	$('#tel').val();
 	let user_addr =	$('#addr').val();
-	alert(user_id);
+	
 	let obj = {
 		name : user_nm ,
 		id : user_id, 
@@ -18,7 +18,8 @@ function join(){
 		tel : user_tel,
 		addr: user_addr
 	}
-
+		
+	
 	$.ajax({
 		url : "/insertMember",
 		data : JSON.stringify(obj),

@@ -4,6 +4,9 @@
 <!doctype html>
 	<!-- Header -->
 	<jsp:include page="../common/Header.jsp"></jsp:include>
+	<script src="js/jqGrid/js/i18n/grid.locale-kr.js" type="text/javascript"></script>
+	<script src="js/jqGrid/js/minified/jquery.jqGrid.min.js" type="text/javascript"></script>
+	<script src="js/jqGrid.js"></script>
 	<!-- MAIN -->
 		<div class="main">
 			<!-- MAIN CONTENT -->
@@ -29,12 +32,7 @@
 				                <tbody>
 				                <!--임시 데이터 삽입 -->
 				                <tr>
-				              		<c:forEach items="${boardlist}" var="list">
-				                    	<td>${list.board_title}</td>
-										<td>${list.board_content}</td>
-				                    	<td>${list.board_writer}</td>
-				                    	
-				                    	</c:forEach>
+				              	 
 				                    	</tr>
 				                </tbody>
 				            </table>
